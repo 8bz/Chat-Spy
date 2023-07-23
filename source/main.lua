@@ -34,7 +34,7 @@ PrivateProperties = {
 
 	local function onChatted(p,msg)
 		if _G.chatSpyInstance == instance then
-			if p==player and msg:lower():sub(1,4)=="/spy" then
+			if p==player and msg:lower():sub(1,4)=="/" then
 				Config.enabled = not Config.enabled
 				wait(0.3)
 				PrivateProperties.Text = "{SPY "..(Config.enabled and "EN" or "DIS").."ABLED}"
